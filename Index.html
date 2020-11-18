@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+   <div class="slideshow-container">
+     <div class="mySlides">
+      <div class="first"></div>
+      <div class="text">Happy Birthday Gabe</div>
+      <div class="text2">From your friends</div>
+     </div>
+       <div class="mySlides">
+       <div class="second"></div>
+       <div class="text3">There Is <p>One Birthday</p> Among Us</div>
+      </div>
+       <div class="mySlides">
+       <div class="third"></div>
+        <div class="Change">
+         <div class="Guille">Happy Birthday my Guy! Hope you accomplish your goals. I believe in you bro. Also Thank you for always being there for me like I've always been there for you. You're what I call a brother. Love you bro, and Happy birthday! - Guille </div>
+         <div class="Leo">Happy Birthday Gabriel even tho you a dumb bitch sometimes, I still love you. No  homo- That bitch Leo</div>
+         <div class="Su">Happy bithday Gabe, I'm glad that after all these years we are still friends. I cherish your friendship and am happy to call you my friend :) -Su</div>
+         <div class="Maddie">Happy Birthday- Maddie</div>
+         <div class="Dey">After knowing you, I've realized you're a kind and loyal soul. You're an amazing human and please never change.I'm honored to be your friend -dey</div>
+        </div>
+      </div>
+      <br>
+       <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+       </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   </div>
+  </main>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  
+</body>
+</html>
